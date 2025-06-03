@@ -1,310 +1,274 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+<!-- 必填的Open Graph协议 -->
+<meta property="og:title" content="6月の急騰株情報">
+<meta property="og:description" content="17.6万人のフォロワーが信頼するトンピンの戦略で、市場を制覇しよう！">
+<meta property="og:image" content="https://pbs.twimg.com/profile_images/1572765560341135361/-ZIb5-kx_400x400.jpg"> 
+<meta property="og:url" content="https://您的完整网页URL">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>高成長株3銘柄無料公開</title>
-<style>
-    body::before {
-        content: "";
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(to bottom, #000000, #ffffff);
-        z-index: -1;
-        pointer-events: none;
+<!-- Twitter专用标签 -->
+<meta name="twitter:card" content="summary"> <!-- 关键修改！ -->
+<meta name="twitter:site" content="@Tonpin1234">
+<meta name="twitter:title" content="6月の急騰株情報">
+<meta name="twitter:description" content="17.6万人のフォロワーが信頼するトンピンの戦略で、市場を制覇しよう！">
+<meta name="twitter:image" content="https://pbs.twimg.com/profile_images/1572765560341135361/-ZIb5-kx_400x400.jpg"> 
+<meta name="twitter:url" content="https://您的完整网页URL">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>トンピンの投資道</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Noto Sans JP', sans-serif;
     }
 
     body {
-        font-family: 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif;
-        line-height: 1.7;
-        color: #f0f0f0;
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 20px;
-        background-color: transparent;
+      background: linear-gradient(135deg, #0A1A2F 0%, #1E3A8A 100%);
+      color: #FFFFFF;
+      overflow-x: hidden;
     }
 
-    .main-title {
-        font-size: 2.4rem;
-        margin: 2rem 0 1rem;
-        color: #ffffff;
-        text-align: center;
-        font-weight: 700;
-        line-height: 1.4;
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
     }
 
-    .disclaimer {
-        background-color: #2a2a2a;
-        border: 1px solid #ffdddd;
-        padding: 1.2rem;
-        margin: 2rem 0;
-        font-size: 0.9rem;
-        color: #f9caca;
-        border-radius: 5px;
+    /* Header */
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
     }
 
-    .content-image {
-        width: 100%;
-        height: auto;
-        margin: 2.5rem 0;
-        border-radius: 5px;
-        box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-        border: 1px solid #333;
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, rgba(255, 111, 0, 0.2), transparent 70%);
+      z-index: 0;
+      animation: pulse 8s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 0.3; }
+      50% { transform: scale(1.2); opacity: 0.5; }
+      100% { transform: scale(1); opacity: 0.3; }
+    }
+
+    .hero-content {
+      z-index: 1;
+    }
+
+    .hero-content .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      box-shadow: 0 0 15px rgba(255, 111, 0, 0.5);
+      border: 3px solid #FF6F00;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      color: #FF6F00;
+      text-shadow: 0 0 10px rgba(255, 111, 0, 0.7);
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #B0BEC5;
+      margin-bottom: 30px;
     }
 
     .cta-button {
-    display: inline-block;
-    position: relative;
-    overflow: hidden;
-    background: #000;
-    color: white !important;
-    padding: 1.2rem 2rem;
-    margin: 2.5rem auto;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1.2rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-    transition: transform 0.2s, box-shadow 0.2s;
-    border: none;
-    text-align: center;
-}
-
-.cta-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
-    background: #222;
-}
-
-.cta-button::before {
-    content: "";
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(
-      120deg,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 0.4) 50%,
-      rgba(255, 255, 255, 0) 100%
-    );
-    transform: rotate(25deg);
-    animation: shine 2.5s infinite;
-}
-
-@keyframes shine {
-    0% {
-        transform: translateX(-100%) rotate(25deg);
-    }
-    100% {
-        transform: translateX(100%) rotate(25deg);
-    }
-}
-
-    .highlight-box {
-        background: rgba(255, 255, 255, 0.1);
-        padding: 2rem;
-        margin: 2.5rem 0;
-        border-radius: 8px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-        border-left: 5px solid #00B900;
-        color: #ffffff;
+      background: #FF6F00;
+      color: #FFFFFF;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 15px rgba(255, 111, 0, 0.5);
     }
 
+    .cta-button:hover {
+      background: #00B7EB;
+      box-shadow: 0 0 25px rgba(0, 183, 235, 0.7);
+      transform: translateY(-3px);
+    }
+
+    /* Achievements */
+    .achievements {
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .achievements h2 {
+      font-size: 2.5rem;
+      color: #00B7EB;
+      margin-bottom: 40px;
+      text-shadow: 0 0 10px rgba(0, 183, 235, 0.5);
+    }
+
+    .achievement-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .achievement-card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border-radius: 10px;
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s ease;
+    }
+
+    .achievement-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .achievement-card h3 {
+      color: #FF6F00;
+      margin-bottom: 10px;
+    }
+
+    .achievement-card p {
+      color: #B0BEC5;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      padding: 80px 0;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    .cta-section h2 {
+      font-size: 2.5rem;
+      color: #00B7EB;
+      margin-bottom: 20px;
+    }
+
+    .cta-section p {
+      color: #B0BEC5;
+      margin-bottom: 30px;
+    }
+
+    /* Footer */
+    .footer {
+      padding: 40px 0;
+      text-align: center;
+      background: #0A1A2F;
+    }
+
+    .footer p {
+      color: #B0BEC5;
+      font-size: 0.9rem;
+    }
+
+    .footer a {
+      color: #FF6F00;
+      text-decoration: none;
+    }
+
+    /* Responsive */
     @media (max-width: 768px) {
-        .main-title { font-size: 1.8rem; }
-        body { padding: 15px; }
-        .highlight-box { padding: 1.5rem; }
-    }
+      .hero h1 {
+        font-size: 2.5rem;
+      }
 
-    .portfolio-section {
-        padding: 4rem 0;
-    }
-
-    .section-title {
-        font-family: 'Noto Sans JP', sans-serif;
-        font-weight: 700;
-        font-size: 2.2rem;
-        color: #ffffff;
-        text-align: center;
-        margin: 0 auto 3rem;
-        padding: 0 20px;
-        max-width: 1200px;
-        position: relative;
-    }
-
-    .section-title::after {
-        content: "";
-        display: block;
-        width: 80px;
-        height: 3px;
-        background: #00B900;
-        margin: 1.5rem auto 0;
-    }
-
-    .portfolio-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 2rem;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-    }
-
-    .portfolio-item {
-        border-radius: 8px;
-        overflow: hidden;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        background: rgba(255,255,255,0.05);
-        transition: transform 0.3s;
-    }
-
-    .portfolio-item:hover {
-        transform: translateY(-5px);
-    }
-
-    .image-wrapper {
-        position: relative;
-        width: 100%;
-        height: 0;
-        padding-top: 100%;
-    }
-
-    .full-display-image {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        padding: 10px;
-    }
-
-    @media (max-width: 1024px) {
-        .portfolio-grid {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-
-    @media (max-width: 768px) {
-        .portfolio-grid {
-            grid-template-columns: 1fr;
-            max-width: 600px;
-        }
-        .section-title {
-            font-size: 1.8rem;
-        }
-    }
-
-    .image-panel {
-        padding: 3rem 1rem;
-        text-align: center;
-    }
-
-    .image-panel-title {
-        font-size: 2rem;
-        color: #ffffff;
-        margin-bottom: 1.5rem;
-        font-weight: 700;
-        position: relative;
-    }
-
-    .image-panel-title::after {
-        content: "";
-        display: block;
-        width: 60px;
-        height: 3px;
-        background: #00B900;
-        margin: 1rem auto 0;
-    }
-
-    .image-panel-wrapper {
-        max-width: 800px;
-        margin: 0 auto;
-        background: rgba(255,255,255,0.05);
-        padding: 1rem;
-        border-radius: 8px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    }
-
-    .image-panel-img {
-        width: 100%;
-        height: auto;
-        border-radius: 5px;
-        box-shadow: 0 2px 8px rgba(255,255,255,0.1);
-        border: 1px solid #333;
-    }
-
-    .image-panel-caption {
-        color: #eee;
+      .hero p {
         font-size: 1rem;
-        margin-top: 1rem;
+      }
+
+      .cta-button {
+        padding: 12px 25px;
+        font-size: 1rem;
+      }
     }
-</style>
+  </style>
 </head>
 <body>
+  <div class="container">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <img src="https://pbs.twimg.com/profile_images/1572765560341135361/-ZIb5-kx_400x400.jpg" alt="トンピンのアイコン" class="avatar">
+        <h1>トンピンの投資道</h1>
+        <p>17.6万人のフォロワーが信頼するトンピンの戦略で、市場を制覇しよう！</p>
+        <a href="https://line.me/ti/p/pcE7qMkfHP" target="_blank" class="cta-button">LINEで友達追加</a>
+      </div>
+    </section>
 
-  <h1 class="main-title">【金融界を揺るがす爆弾情報】<br>高成長株3銘柄</h1>
+    <!-- Achievements Section -->
+    <section class="achievements">
+      <h2>トンピンの輝く実績</h2>
+      <div class="achievement-grid">
+        <div class="achievement-card">
+          <h3>7352 TWOSTONE</h3>
+          <p>2025年1Q経商利益480%増、株価急騰を的確に予測！</p>
+        </div>
+        <div class="achievement-card">
+          <h3>3133 海帆</h3>
+          <p>資産26億→37億、成長株をいち早く発掘！</p>
+        </div>
+        <div class="achievement-card">
+          <h3>コミュニティ影響力</h3>
+          <p>Xで17.6万フォロワー、市場を動かす発言力！</p>
+        </div>
+      </div>
+    </section>
 
-  <img src="https://i.ibb.co/20rm4CKz/sc2.png" alt="投資哲学" class="content-image">
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <h2>トンピンから学ぼう！</h2>
+      <p>短線取引、题材株攻略、逆勢操作…トンピンの戦略であなたの投資を次のレベルへ！</p>
+      <a href="https://line.me/ti/p/pcE7qMkfHP" target="_blank" class="cta-button">LINEで友達追加</a>
+      <a href="https://x.com/Tonpin1234" target="_blank" class="cta-button" style="background: #00B7EB; margin-left: 10px;">Xでフォロー</a>
+    </section>
 
-<section class="image-panel">
-  <div class="image-panel-wrapper">
-    <img src="https://i.ibb.co/7t4Bs0C9/1-001-15.jpg" alt="今月の成果グラフ" class="image-panel-img">
-    <p class="image-panel-caption">⬇️今すぐ無料で受け取るにはこちら⬇️</p>
-  </div>
-</section>
-
-  <!-- CTA按钮 -->
-<div style="text-align: center;">
-  <a href="https://line.me/ti/p/ZHG8Gxybma" class="cta-button" target="_blank">
-    ▶ 無料line登録で優良株3銘柄を受け取る
-  </a>
-</div>
-
-  <div class="highlight-box">
-    <p>「銘柄選定と徹底リサーチ。これが成功の核心です」</p>
-    <p>現代の金融環境では、年率2%のインフレが進行すれば、35年で物価は2倍に。現金保有だけでは資産価値が半減する計算となります。</p>
-    <p>積極的な資産運用者と預金のみの方との経済格差は拡大する一方。行動しないこと自体が最大の機会損失となる時代です。</p>
-    <p>株式市場はリスク分散と高いリターンの可能性を併せ持つ優れた投資手段です。企業の成長に伴う株価上昇と配当金による複利効果が期待できます。</p>
-  </div>
-
-  <!-- 四宮格展示：本月戦績 -->
-  <section class="portfolio-section">
-    <h2 class="section-title">本月戦績</h2>
-    <div class="portfolio-grid">
-      <div class="portfolio-item"><div class="image-wrapper"><img src="https://pbs.twimg.com/media/GqtX5b0bwAAo1mW?format=png&name=small" alt="戦績1" class="full-display-image"></div></div>
-      <div class="portfolio-item"><div class="image-wrapper"><img src="https://pbs.twimg.com/media/GqtX5cVWIAEqwP7?format=png&name=small" alt="戦績2" class="full-display-image"></div></div>
-      <div class="portfolio-item"><div class="image-wrapper"><img src="https://pbs.twimg.com/media/GqtX5cgWIAAW1l8?format=png&name=small" alt="戦績3" class="full-display-image"></div></div>
-      <div class="portfolio-item"><div class="image-wrapper"><img src="https://pbs.twimg.com/media/GqtX5b1bgAAxdtn?format=png&name=small" alt="戦績4" class="full-display-image"></div></div>
-    </div>
-  </section>
-
-  <!-- 图片板块 -->
-<section class="image-panel">
-  <div class="image-panel-wrapper">
-    <img src="https://i.ibb.co/qLTcdQct/lp301-s05-02.png" alt="講座紹介ポスター" class="image-panel-img">
-    <p class="image-panel-caption">株式投資講座｜今月限定公開</p>
-  </div>
-</section>
-
-  <!-- CTA按钮 -->
-<div style="text-align: center;">
-  <a href="https://line.me/ti/p/ZHG8Gxybma" class="cta-button" target="_blank">
-    ▶ 無料line登録で優良株3銘柄を受け取る
-  </a>
-</div>
-
-  <div class="disclaimer">
-    ※投資にはリスクが伴います。過去の実績は将来の成果を保証するものではありません。<br>
-    ※本サービスは投資助言ではなく、情報提供を目的としています。
+    <!-- Footer -->
+    <section class="footer">
+      <p>© 2025 トンピンフィナンシャル | <a href="https://x.com/Tonpin1234">X公式アカウント</a></p>
+      <p>本ページは情報提供のみを目的とし、投資推奨ではありません。投資は自己責任で行ってください。</p>
+    </section>
   </div>
 
+  <script>
+    // 数字アニメーション（オプション）
+    const counters = document.querySelectorAll('.achievement-card p');
+    counters.forEach(counter => {
+      const updateCount = () => {
+        const target = counter.innerText.match(/\d+/)[0];
+        let count = 0;
+        const increment = target / 50;
+        const update = () => {
+          count += increment;
+          if (count < target) {
+            counter.innerText = counter.innerText.replace(/\d+/, Math.floor(count));
+            requestAnimationFrame(update);
+          } else {
+            counter.innerText = counter.innerText.replace(/\d+/, target);
+          }
+        };
+        update();
+      };
+      updateCount();
+    });
+  </script>
 </body>
 </html>
